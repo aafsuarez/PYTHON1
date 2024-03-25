@@ -37,7 +37,7 @@ while True:
     elif opcion == "2":
         nombre = input("Ingrese el nombre del estudiante: ")
         apellido = input("Ingrese el apellido del estudiante: ")
-        cedula = input("Ingrese la cédula del estudiante: ")
+        cedula = input("Ingrese la cedula del estudiante: ")
         nota1 = float(input("Ingrese la nota 1 : "))
         nota2 = float(input("Ingrese la nota 2 : "))
         nota3 = float(input("Ingrese la nota 3 : "))
@@ -49,7 +49,7 @@ while True:
 
     # Actualizar Notas del estudiante
     elif opcion == "3":
-        cedula = input("Ingrese la cédula del estudiante que desea actualizar: ")
+        cedula = input("Ingrese la cedula del estudiante que desea actualizar: ")
         encontrado = False
         for estudiante in estudiantes1:
             if estudiante['cedula'] == cedula:
