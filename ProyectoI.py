@@ -33,7 +33,7 @@ while True:
     elif opcion == "2":
         nombre = input("Ingrese el nombre del estudiante: ")
         apellido = input("Ingrese el apellido del estudiante: ")
-        cedula = input("Ingrese la cédula del estudiante: ")
+        cedula = input("Ingrese la cedula del estudiante: ")
         while True:
             nota = input("Ingrese la nota 1: ")
             if nota.isdigit():
@@ -81,14 +81,14 @@ while True:
                         nota2=float(nota)
                         break
                     else: 
-                        print('Por favor, ingrese solo números para la nota 2.')
+                        print('Por favor, ingrese solo numeros para la nota 2.')
                 while True: 
                     nota=input("Ingrese la nota 3: ")
                     if nota.isdigit():
                         nota3=float(nota)
                         break
                     else: 
-                        print('Por favor, ingrese solo números para la nota 3.')
+                        print('Por favor, ingrese solo numeros para la nota 3.')
                 print("Estudiante actualizado exitosamente.")
                 break
             break
