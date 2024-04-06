@@ -33,7 +33,7 @@ def menu_actualizar():
 
 def menu_eliminar():
     print("--- ELIMINAR TAREAS ---")
-    print("1. Por código")
+    print("1. Por codigo")
     print("2. Atrás")
 
 def agregar_tarea(tareas):
@@ -98,7 +98,7 @@ def mostrar_tareasfiltradas(tareas_filtradas):
         print("No se encontraron tareas que coincidan con el filtro.")
     else:
         for tarea in tareas_filtradas:
-            print(f"Código: {tarea['codigo']}, Título: {tarea['titulo']}, Fecha: {tarea['fecha']}")
+            print(f"Codigo: {tarea['codigo']}, titulo: {tarea['titulo']}, Fecha: {tarea['fecha']}")
 
 def eliminar_tarea(tareas, codigo):
     tarea_encontrada = False
@@ -132,7 +132,7 @@ def actualizar_tarea(tareas, codigo, opcion_actualizacion):
                 elif nuevo_estado in ['pendiente', 'p']:
                     tarea['completada'] = False
                 else:
-                    print("Estado no válido.")
+                    print("Estado no valido.")
             elif opcion_actualizacion == '5':
                 while True:
                     nueva_fecha_str = input("Ingrese la nueva fech de la tarea (Formato: DD-MM-YYYY): ")
@@ -143,12 +143,12 @@ def actualizar_tarea(tareas, codigo, opcion_actualizacion):
                     except ValueError:
                         print("Formato de fecha incorrecto. Intente nuevamente.")
             else:
-                print("Opción de actualización no válida.")
+                print("Opcion de actualización no valida.")
             print("Tarea actualizada exitosamente.")
             break
 
     if not tarea_encontrada:
-        print("El código proporcionado no corresponde a ninguna tarea.")
+        print("El codigo proporcionado no corresponde a ninguna tarea.")
               
 #funcion principal
 def main():
@@ -179,7 +179,7 @@ def main():
 
                 if filtrado_opcion=='1':
                     for tarea in tareas:
-                        print(f"Código: {tarea['codigo']}, Título: {tarea['titulo']}")
+                        print(f"codigo: {tarea['codigo']}, Titulo: {tarea['titulo']}")
                         print('--------------------------------------------------')
                         print('--------------------------------------------------')
 
@@ -189,7 +189,7 @@ def main():
 
                 elif filtrado_opcion == '2':
                     for tarea in tareas:
-                        print(f"Código: {tarea['codigo']}, Título: {tarea['titulo']}, Fecha: {tarea['fecha']}")
+                        print(f"Codigo: {tarea['codigo']}, titulo: {tarea['titulo']}, Fecha: {tarea['fecha']}")
                         print('-----------------------------------------------------------')
                         print('-----------------------------------------------------------')
                     titulo = input("Ingrese el titulo para filtrar:  ")
@@ -198,7 +198,7 @@ def main():
                     
                 elif filtrado_opcion == '3':
                     for tarea in tareas:
-                        print(f"Código: {tarea['codigo']}, Título: {tarea['titulo']}, Fecha: {tarea['fecha']}")
+                        print(f"Codigo: {tarea['codigo']}, titulo: {tarea['titulo']}, Fecha: {tarea['fecha']}")
                         print('-----------------------------------------------------------')
                         print('-----------------------------------------------------------')
 
@@ -237,12 +237,12 @@ def main():
             opcion_eliminar=input("Seleccione una opcion: ")
             while True: 
                 if opcion_eliminar == '1':
-                    codigo = input("Ingrese el código de la tarea que desea eliminar: ")
+                    codigo = input("Ingrese el codigo de la tarea que desea eliminar: ")
                     eliminar_tarea(tareas, codigo)
                 elif opcion_eliminar == '2':
                     return
                 else:
-                    print("Opción no válida. Inténtalo de nuevo.")
+                    print("Opcion no valida. Intente de nuevo.")
 #Salir
         elif opcion == '6':
             print("Saliendo del programa...")
